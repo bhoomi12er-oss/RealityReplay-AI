@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #060913;
+    color: #e2e8f0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom subtle ambient grid & glow patterns */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+}
+
+.glow-violet-sm {
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.15);
+}
+
+.glow-violet-md {
+  box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.25);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(14, 19, 36, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.12);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(18, 25, 48, 0.85);
+  border-color: rgba(139, 92, 246, 0.28);
+  box-shadow: 0 10px 30px -10px rgba(10, 14, 28, 0.8), 0 0 20px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080c1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2640;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d385f;
+}
